@@ -3,20 +3,18 @@ import json
 import requests
 import os
 import csv
+import logging
 
 # Create your tests here.
 
 
 class ApiHelper:
 
-        #def _init_(self,page_nr):
-        #    self.page_nr = page_nr
-      
         def star_wars_characters(self,page_nr):
             # returns a list (or generator)
             # of the name, height, and gender of each
             # Star Wars character
-            print(page_nr)
+            
             response = requests.get(url = page_nr).text
             
             data = json.loads(response)
@@ -43,7 +41,7 @@ class ApiHelper:
 def append_to_file(filepath, name, age, gender):
         # append the 'name', 'height' and 'gender' of each Star Wars
         # character to a text file (or csv) provided by 'filepath'
-        print(name,age,gender)
+        
         row = [name,age,gender]
 
         with open(filepath, 'a') as csvFile:
@@ -58,7 +56,7 @@ obj = ApiHelper()
 star_chars_list_final=obj.star_wars_characters(url)
 
 filepath = os.getcwd() + "/startwar.csv"
-#print(filepath)
+
 row = ["Name","Height","Gender"]
 
 with open(filepath, 'a') as csvFile:
