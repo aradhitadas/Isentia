@@ -18,7 +18,7 @@ class ApiHelper:
             response = requests.get(url = page_nr).text
             
             data = json.loads(response)
-            #print(data["results"])
+            
             results = data["results"]
             star_chars_list = []
             star_chars_list_final = []
