@@ -1,12 +1,13 @@
-#Isentia
-# Pre-Requisite:
+# Isentia 
+
+# Pre-Requisite
 Used requests for api call. So python 3 is needed to execute the program. Installed requests module by running - pip install requests
 
-#To run program
+# To run program
 1. To generate the csv file, checkout the code & run -- python isentia.py 
 2. To run unit test, run -- python test_isentia.py
 
-#Explanation of Code
+# Explanation of Code
 1. star_wars_characters method:
 	1. the response of the get request is received in variable 'response' in text format and then chnaged to dictionary in the variable 'data'.
 	2. The information of the starwar character is inside result key so iterating through the 'results', & each of the starwar character details is stored in a dictionary - 'star_chars'.
